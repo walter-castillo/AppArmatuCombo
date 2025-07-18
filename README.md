@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🍔 Proyecto: "Arma Tu Combo de Hamburguesas"
+¡Bienvenido al proyecto "Arma Tu Combo de Hamburguesas"! Esta aplicación permite a los usuarios personalizar su combo de hamburguesas eligiendo ingredientes, acompañamientos y bebidas, con un sistema de carrito de compras integrado.
 
-## Getting Started
+🚀 Características principales
+✔ Personalización de Hamburguesa:
 
-First, run the development server:
+Selección de tipo de pan (clásico, integral, sin gluten).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Elección de carne (res, pollo, vegetariano).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Añadir ingredientes extra (queso, tocino, aguacate, etc.).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+✔ Acompañamientos y Bebidas:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Papas fritas, aros de cebolla, ensalada.
 
-## Learn More
+Refresco, cerveza, agua mineral.
 
-To learn more about Next.js, take a look at the following resources:
+✔ Carrito de Compras:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Visualizar el combo seleccionado.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Calcular el precio total.
 
-## Deploy on Vercel
+Opción de confirmar pedido.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✔ Interfaz Amigable:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Diseño intuitivo y responsive.
+
+Animaciones interactivas.
+
+🛠 Tecnologías Utilizadas
+Frontend: HTML5, CSS3, JavaScript (React/Vanilla JS).
+
+Backend (Opcional): Node.js + Express (para guardar pedidos).
+
+Base de Datos (Opcional): Firebase o MongoDB.
+
+📌 Instalación
+Clona el repositorio:
+
+bash
+git clone https://github.com/tuusuario/arma-tu-combo.git  
+Instala las dependencias (si usa Node.js):
+
+bash
+npm install  
+Ejecuta el proyecto:
+
+bash
+npm start  
+📸 Capturas de Pantalla
+(Incluir imágenes de la interfaz aquí)
+
+🔗 Demo
+🔜 Próximamente en GitHub Pages o Vercel/Netlify.
+
+🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Abre un issue o envía un pull request.
+
+📜 Licencia
+MIT License © 2023 - [Tu Nombre]
