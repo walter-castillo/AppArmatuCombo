@@ -1,4 +1,7 @@
+import { ClientProvider } from "./ClientProvider";
 import "./globals.css";
+
+
 
 export const metadata = {
   title: "Create Next App",
@@ -9,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body>
-        {children}
+      <ClientProvider>{children}</ClientProvider>
       </body>
     </html>
   );
