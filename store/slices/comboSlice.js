@@ -12,16 +12,13 @@ const initialState = {
     { id: 2, name: "Bacon", price: 300, cal: 150 },
     { id: 3, name: "Lettuce", price: 100, cal: 20 },
     { id: 4, name: "Tomato", price: 100, cal: 30 },
-    { id: 5, name: "Pickles", price: 100, cal: 10 },
-    { id: 6, name: "Onion", price: 100, cal: 15 },
     { id: 7, name: "Egg", price: 250, cal: 90 },
   ],
   drinks: [
     { id: 1, name: "Coca-Cola", price: 500, cal: 200 },
     { id: 2, name: "Water", price: 300, cal: 0 },
     { id: 3, name: "Sprite", price: 500, cal: 180 },
-    { id: 4, name: "Fanta", price: 500, cal: 190 },
-    { id: 5, name: "Iced Tea", price: 550, cal: 120 },
+
   ],
   selectedCombo: {
     base: null,
@@ -38,7 +35,9 @@ const comboSlice = createSlice({
   reducers: {
     selectBase: (state, action) => {
       state.selectedCombo.base = action.payload;
+      console.log(state, comboSlice, 'antes de recalcular');
       comboSlice.caseReducers.recalculateTotals(state);
+      console.log(state, comboSlice, 'despues de recalcular');
     },
     toggleIngredient: (state, action) => {
       const id = action.payload.id;
