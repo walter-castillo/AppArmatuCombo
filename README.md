@@ -54,7 +54,7 @@ npm start
 (Incluir imágenes de la interfaz aquí)
 
 🔗 Demo
-🔜 Próximamente en GitHub Pages o Vercel/Netlify.
+🔜 https://app-armatu-combo.vercel.app/combo
 
 🤝 Contribuciones
 ¡Las contribuciones son bienvenidas! Abre un issue o envía un pull request.
