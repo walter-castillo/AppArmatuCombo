@@ -2,23 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   bases: [
-    { id: 1, name: "Single", price: 1000, cal: 400 },
-    { id: 2, name: "Double Patty", price: 1400, cal: 700 },
-    { id: 3, name: "Vegan", price: 1200, cal: 350 },
-    { id: 4, name: "Chicken", price: 1300, cal: 500 },
+    { id: 1, name: "Single", price: 1000, cal: 400, image: './bases/simple.png' },
+    { id: 2, name: "Double Patty", price: 1400, cal: 700, image: './bases/doble.png' },
+    { id: 3, name: "Vegan", price: 1200, cal: 350, image: './bases/vegan.png' },
+    { id: 4, name: "Chicken", price: 1300, cal: 500, image: './bases/pollo.jpg' },
   ],
   ingredients: [
-    { id: 1, name: "Cheese", price: 200, cal: 100 },
-    { id: 2, name: "Bacon", price: 300, cal: 150 },
-    { id: 3, name: "Lettuce", price: 100, cal: 20 },
-    { id: 4, name: "Tomato", price: 100, cal: 30 },
-    { id: 7, name: "Egg", price: 250, cal: 90 },
+    { id: 1, name: "Cheese", price: 200, cal: 100, image: './ingredients/queso.png' },
+    { id: 2, name: "Bacon", price: 300, cal: 150, image: './ingredients/bacon.jpg' },
+    { id: 3, name: "Lettuce", price: 100, cal: 20, image: './ingredients/lechuga.jpg' },
+    { id: 4, name: "Tomato", price: 100, cal: 30, image: './ingredients/tomate.jpg' },
+    { id: 7, name: "Egg", price: 250, cal: 90, image: './ingredients/huevo.jpg' },
   ],
   drinks: [
-    { id: 1, name: "Coca-Cola", price: 500, cal: 200 },
-    { id: 2, name: "Water", price: 300, cal: 0 },
-    { id: 3, name: "Sprite", price: 500, cal: 180 },
-
+    { id: 1, name: "Coca-Cola", price: 500, cal: 200, image: './drinks/coca.jpg' },
+    { id: 2, name: "Water", price: 300, cal: 0, image: './drinks/agua.jpg' },
+    { id: 3, name: "Sprite", price: 500, cal: 180, image: './drinks/sprite.jpg' },
   ],
   selectedCombo: {
     base: null,
