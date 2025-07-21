@@ -1,12 +1,14 @@
 'use client';
-import { useSelector } from 'react-redux';
+import { seleccionarBase } from '@/store/slices/comboSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Bases = () => {
   const bases = useSelector((state) => state.combo.bases);
-      
-  const handleSelect = (id) => {
-    // setSelectedBaseId(id);
-    console.log("Base seleccionada:", id);
+
+  const dispatch = useDispatch();
+
+  const handleSelect = (base) => {
+    dispatch(seleccionarBase(base));
   };
   return (
     <div>
@@ -17,8 +19,8 @@ const Bases = () => {
               <img
                 src={base.image}
                 alt={base.name}
-                className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg"
-                onClick={() => handleSelect(base.id)}
+                className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg cursor-pointer"
+                onClick={() => handleSelect(base)}
               />
               <div className="ml-4">
                 <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">

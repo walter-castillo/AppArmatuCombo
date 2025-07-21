@@ -5,7 +5,6 @@ import { useSelector } from "react-redux";
 const ComboPreview = () => {
 const comboSeleccionado = useSelector((state) => state.combo.selectedCombo);
 console.log(comboSeleccionado);
-
   return (
     <>
       <div className="w-full border-t border-gray-300 "></div>
@@ -16,21 +15,21 @@ console.log(comboSeleccionado);
         <ul className="text-gray-700 space-y-2">
           <li>
             <span className="font-semibold">Base:</span>{" "}
-            {comboSeleccionado.base}
+            {comboSeleccionado.base?.name}
           </li>
           <li>
             <span className="font-semibold">Ingredientes:</span>{" "}
-            {comboSeleccionado.ingredients.join(", ")}
+            {/* {comboSeleccionado?.ingredients.join(", ")} */}
           </li>
           <li>
             <span className="font-semibold">Bebida:</span>{" "}
-            {comboSeleccionado.drink}
+            {/* {comboSeleccionado.drink} */}
           </li>
           <li>
-            <span className="font-semibold">Precio total:</span> $450
+            <span className="font-semibold">Precio total:</span> $ {comboSeleccionado.totalPrice}
           </li>
           <li>
-            <span className="font-semibold">Calorías totales:</span> 850 kcal
+            <span className="font-semibold">Calorías totales:</span> {comboSeleccionado.totalCal} kcal
           </li>
         </ul>
       </div>

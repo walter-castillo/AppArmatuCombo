@@ -10,7 +10,10 @@ const FinalizarButton = () => {
   const router = useRouter();
 
   const generarPDF = () => {
-    const doc = new jsPDF();
+    const doc = new jsPDF({
+      unit: "mm",
+      format: [80, 100],
+    });
 
     doc.setFontSize(16);
     doc.text("Resumen de tu combo", 10, 20);
@@ -34,7 +37,7 @@ const FinalizarButton = () => {
       onClick={generarPDF}
       className="px-6 py-3  mr-1 text-sm font-medium text-white bg-green-600 rounded-xl hover:bg-green-700 transition"
     >
-      Finalizar y Descargar PDF
+      Finalizar
     </button>
   );
 };

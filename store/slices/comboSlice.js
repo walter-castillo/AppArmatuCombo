@@ -86,18 +86,18 @@ const initialState = {
       image: "./drinks/sprite.jpg",
     },
   ],
-  // selectedCombo: {
-  //   base: null,
-  //   ingredients: [],
-  //   drink: null,
-  //   totalPrice: 0,
-  //   totalCal: 0,
-  // },
   selectedCombo: {
-    base: "Hamburguesa doble",
-    ingredients: ["Queso", "Lechuga", "Tomate"],
-    drink: "Coca-Cola"
+    base: null,
+    ingredients: [],
+    drink: null,
+    totalPrice: 0,
+    totalCal: 0,
   },
+  // selectedCombo: {
+  //   base: "Hamburguesa doble",
+  //   ingredients: ["Queso", "Lechuga", "Tomate"],
+  //   drink: "Coca-Cola"
+  // },
 };
 
 const comboSlice = createSlice({
@@ -105,9 +105,14 @@ const comboSlice = createSlice({
   initialState,
   reducers: {
 
-  seleccionarBase:(state, action)=>{
-    state.selectedCombo.base  },
-}
+    seleccionarBase:(state, action)=>{
+      state.selectedCombo.base=action.payload
+      state.selectedCombo.totalPrice = action.payload.price
+      state.selectedCombo.totalCal =action.payload.cal
+     },
+
+
+  }
 })
 /* 
 selectBase: (state, action) => {

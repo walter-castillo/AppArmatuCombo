@@ -19,7 +19,7 @@ const Ingredients = () => {
                 src={ingredient.image}
                 alt={ingredient.name}
                 className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg"
-                onClick={() => handleSelect(ingredient.id)}
+                onClick={() => handleSelect(ingredient)}
               />
               <div className="ml-4">
                 <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
