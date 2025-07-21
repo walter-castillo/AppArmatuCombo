@@ -24,11 +24,7 @@ console.log(comboSeleccionado);
           </li>
           <li>
             <span className="font-semibold">Bebida:</span>{" "}
-            {comboSeleccionado.drinks}
-          </li>
-          <li>
-            <span className="font-semibold">Papas:</span>{" "}
-            {comboSeleccionado.papas}
+            {comboSeleccionado.drink}
           </li>
           <li>
             <span className="font-semibold">Precio total:</span> $450

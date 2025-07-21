@@ -2,7 +2,7 @@
 import { useSelector } from 'react-redux';
 
 const Bases = () => {
-      const bases = useSelector((state) => state.combo.bases);
+  const bases = useSelector((state) => state.combo.bases);
       
   const handleSelect = (id) => {
     // setSelectedBaseId(id);

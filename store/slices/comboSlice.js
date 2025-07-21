@@ -96,8 +96,7 @@ const initialState = {
   selectedCombo: {
     base: "Hamburguesa doble",
     ingredients: ["Queso", "Lechuga", "Tomate"],
-    drink: "Coca-Cola",
-    papas: "Papas clásicas",
+    drink: "Coca-Cola"
   },
 };
 
@@ -107,8 +106,7 @@ const comboSlice = createSlice({
   reducers: {
 
   seleccionarBase:(state, action)=>{
-    state
-  },
+    state.selectedCombo.base  },
 }
 })
 /* 

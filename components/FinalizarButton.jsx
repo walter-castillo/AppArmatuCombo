@@ -1,14 +1,12 @@
 "use client";
 import jsPDF from "jspdf";
 import { useRouter } from "next/navigation";
+import { useSelector } from "react-redux";
 
 const FinalizarButton = () => {
-  const combo = {
-    base: "Double Patty",
-    ingredientes: ["Queso extra", "Lechuga", "Tomate", "Salsa BBQ"],
-    bebida: "Fanta Naranja",
-  };
-  
+  const comboSeleccionado = useSelector((state) => state.combo.selectedCombo);
+  console.log(comboSeleccionado);
+
   const router = useRouter();
 
   const generarPDF = () => {
@@ -18,9 +16,13 @@ const FinalizarButton = () => {
     doc.text("Resumen de tu combo", 10, 20);
 
     doc.setFontSize(12);
-    doc.text(`Hamburguesa: ${combo.base}`, 10, 40);
-    doc.text(`Ingredientes: ${combo.ingredientes.join(", ")}`, 10, 50);
-    doc.text(`Bebida: ${combo.bebida}`, 10, 60);
+    doc.text(`Hamburguesa: ${comboSeleccionado.base}`, 10, 40);
+    doc.text(
+      `Ingredientes: ${comboSeleccionado.ingredients.join(", ")}`,
+      10,
+      50
+    );
+    doc.text(`Bebida: ${comboSeleccionado.drink}`, 10, 60);
 
     doc.save("combo-resumen.pdf");
 
