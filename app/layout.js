@@ -1,5 +1,8 @@
 import { ClientProvider } from "./ClientProvider";
+
 import "./globals.css";
+
+
 
 
 
@@ -11,8 +14,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body>
-      <ClientProvider>{children}</ClientProvider>
+      <body className="bg-sky-400">
+        <ClientProvider>{children}</ClientProvider>
       </body>
     </html>
   );

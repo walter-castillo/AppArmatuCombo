@@ -3,20 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Back = () => {
+const Back = ({url}) => {
 
 
     const pathName = usePathname();
-    const backHref =
-      pathName === "/ingredientes"
-        ? "/bases"
-        : pathName === "/bebidas"
-        ? "/ingredientes"
-        : pathName;
   return (
     <Link
       className="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-100 rounded-xl hover:bg-gray-200 transition"
-      href={backHref}
+      href={url ? url : pathName}
       onClick={() => console.log("Volver al paso anterior", pathName)}
     >
       ← Atrás

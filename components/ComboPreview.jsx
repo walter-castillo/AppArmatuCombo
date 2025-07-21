@@ -1,43 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const ComboPreview = () => {
-  // Simulación de datos del combo (reemplaza con tu lógica real)
-  const [combo, setCombo] = useState({
-    base: "Hamburguesa doble",
-    ingredientes: ["Queso", "Lechuga", "Tomate"],
-    bebida: "Coca-Cola",
-    papas: "Papas clásicas",
-  });
+const comboSeleccionado = useSelector((state) => state.combo.selectedCombo);
+console.log(comboSeleccionado);
 
   return (
     <>
-<div className="w-full border-t border-gray-300 "></div>
-      <div className="mt-12 p-6 bg-gray-50 rounded-lg shadow bg-rose-100">
+      <div className="w-full border-t border-gray-300 "></div>
+      <div className="mt-12 p-6 bg-gray-50 rounded-lg shadow bg-rose-300">
         <h3 className="text-xl font-bold mb-4 text-gray-800">
           Tu combo actual
         </h3>
         <ul className="text-gray-700 space-y-2">
           <li>
-            <span className="font-semibold">Base:</span> {combo.base}
+            <span className="font-semibold">Base:</span>{" "}
+            {comboSeleccionado.base}
           </li>
           <li>
             <span className="font-semibold">Ingredientes:</span>{" "}
-            {combo.ingredientes.join(", ")}
+            {comboSeleccionado.ingredients.join(", ")}
           </li>
           <li>
-            <span className="font-semibold">Bebida:</span> {combo.bebida}
+            <span className="font-semibold">Bebida:</span>{" "}
+            {comboSeleccionado.drinks}
           </li>
           <li>
-            <span className="font-semibold">Papas:</span> {combo.papas}
+            <span className="font-semibold">Papas:</span>{" "}
+            {comboSeleccionado.papas}
           </li>
-      <li>
+          <li>
             <span className="font-semibold">Precio total:</span> $450
-      </li>
-      <li>
+          </li>
+          <li>
             <span className="font-semibold">Calorías totales:</span> 850 kcal
-      </li>
+          </li>
         </ul>
       </div>
     </>

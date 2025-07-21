@@ -5,7 +5,7 @@ import {
   toggleIngredient,
   selectDrink,
   clearCombo,
-} from "@/store/slices/comboSlice";
+} from "@/store/slices/combo2Slice";
 import {
   selectBases,
   selectIngredients,

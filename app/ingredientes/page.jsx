@@ -5,7 +5,7 @@ import Next from "@/components/Next";
 
 const page = () => {
   return (
-    <div className="bg-white py-24 mx-w-7xl px-6 lg:px-8">
+    <div className="py-24 mx-w-7xl px-6 lg:px-8">
       <div>
         <h2 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
           Paso 2: Personalizá tus ingredientes
@@ -15,11 +15,11 @@ const page = () => {
           lechuga, salsas o lo que más te guste. Hacela única, como vos.
         </p>
       </div>
-      <div className="mt-16 flex justify-between items-center max-w-7xl container">
-        <Back />
-        <Next />
+      <div className="m-5 flex justify-between items-center max-w-7xl ">
+        <Back url={"/bases"} />
+        <Next url={"/bebidas"} />
       </div>
-      <div className="grid max-w-7xl gap-20 px-6 lg:px-8 ">
+      <div className="grid max-w-7xl gap-20 px-6 lg:px-8  bg-sky-200 ">
         <Ingredients />
       </div>
       <ComboPreview />
