@@ -2,6 +2,8 @@ import Back from "@/components/Back";
 import ComboPreview from "@/components/ComboPreview";
 import Drinks from "@/components/Drinks";
 import FinalizarButton from "@/components/FinalizarButton";
+import NewCombo from "@/components/NewCombo";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -15,9 +17,10 @@ const page = () => {
           clásicas, sin azúcar o jugos naturales.!
         </p>
       </div>
-      
+
       <div className="m-5 flex justify-between">
         <Back url={"/ingredientes"} />
+        <NewCombo />        
         <FinalizarButton />
       </div>
       <div className="grid max-w-7xl gap-20 px-6 lg:px-8  bg-sky-200">

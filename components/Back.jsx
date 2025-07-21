@@ -9,11 +9,15 @@ const Back = ({url}) => {
     const pathName = usePathname();
   return (
     <Link
-      className="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-100 rounded-xl hover:bg-gray-200 transition"
       href={url ? url : pathName}
-      onClick={() => console.log("Volver al paso anterior", pathName)}
+      passHref
     >
-      ← Atrás
+      <span
+        className="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-100 rounded-xl hover:bg-gray-200 transition cursor-pointer inline-block"
+        onClick={() => console.log("Volver al paso anterior", pathName)}
+      >
+        ← Atrás
+      </span>
     </Link>
   );
 }
