@@ -1,15 +1,14 @@
 "use client";
 import { ingresarNombre } from "@/store/slices/comboSlice";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const NombreInput = () => {
-  const selectedCombo = useSelector((state) => state.combo.selectedCombo);
   const [nombre, setNombre] = useState("");
   const dispatch = useDispatch();
 
   const changeName = (valor) => {
-    setNombre(valor); 
+      setNombre(valor)
     dispatch(ingresarNombre(valor)); 
   };
 

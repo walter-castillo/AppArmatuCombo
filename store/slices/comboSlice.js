@@ -90,7 +90,7 @@ const initialState = {
     name:null,
     base: null,
     ingredients: [],
-    drink: null,
+    drinks: [],
     totalPrice: 0,
     totalCal: 0,
 
@@ -101,30 +101,86 @@ const comboSlice = createSlice({
   name: "combo",
   initialState,
   reducers: {
+    seleccionarBase: (state, action) => {
+      state.selectedCombo.base = action.payload;
+      state.selectedCombo.totalPrice = action.payload.price;
+      state.selectedCombo.totalCal = action.payload.cal;
+    },
 
-    seleccionarBase:(state, action)=>{
-      state.selectedCombo.base=action.payload
-      state.selectedCombo.totalPrice = action.payload.price
-      state.selectedCombo.totalCal =action.payload.cal
-     },
-
-     ingresarNombre:(state, action) => {
+    ingresarNombre: (state, action) => {
       state.selectedCombo.name = action.payload;
-     },
+    },
 
-     LimpiarSelectedCombo:(state) => {
-      state.selectedCombo =  {
-        name:null,
+    seleccionarIngredientes: (state, action) => {
+      const {
+        id: idFront,
+        name: nameFront,
+        price: priceFront,
+        cal: calFront,
+      } = action.payload;
+
+      const ingredients = state.selectedCombo.ingredients;
+
+      const ingredienteExistente = ingredients.find(
+        (item) => item.id === idFront
+      );
+
+      if (ingredienteExistente) {
+        ingredienteExistente.cant += 1;
+      } else {
+        ingredients.push({
+          id: idFront,
+          name: nameFront,
+          price: priceFront,
+          cal: calFront,
+          cant: 1,
+        });
+      }
+      state.selectedCombo.totalPrice += priceFront;
+      state.selectedCombo.totalCal += calFront;
+    },
+
+    seleccionarDrinks: (state, action) => {
+      const {
+        id: idFront,
+        name: nameFront,
+        price: priceFront,
+        cal: calFront,
+      } = action.payload;
+
+      const drinks = state.selectedCombo.drinks;
+
+      const drinkExistente = drinks.find(
+        (item) => item.id === idFront
+      );
+
+      if (drinkExistente) {
+        drinkExistente.cant += 1;
+      } else {
+        drinks.push({
+          id: idFront,
+          name: nameFront,
+          price: priceFront,
+          cal: calFront,
+          cant: 1,
+        });
+      }
+      state.selectedCombo.totalPrice += priceFront;
+      state.selectedCombo.totalCal += calFront;
+    },
+
+    LimpiarSelectedCombo: (state) => {
+      state.selectedCombo = {
+        name: null,
         base: null,
         ingredients: [],
-        drink: null,
+        drinks: [],
         totalPrice: 0,
         totalCal: 0,
-      }
-     },
-     
-  }
-})
+      };
+    },
+  },
+});
 /* 
 selectBase: (state, action) => {
       state.selectedCombo.base = action.payload;
@@ -185,6 +241,12 @@ export const {
   clearCombo, 
 } = comboSlice.actions; */
 
-export const { seleccionarBase, ingresarNombre, LimpiarSelectedCombo } = comboSlice.actions;
+export const {
+  seleccionarBase,
+  ingresarNombre,
+  seleccionarIngredientes,
+  seleccionarDrinks,
+  LimpiarSelectedCombo,
+} = comboSlice.actions;
 
 export default comboSlice.reducer;

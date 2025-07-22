@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 const ComboPreview = () => {
 const comboSeleccionado = useSelector((state) => state.combo.selectedCombo);
-console.log(comboSeleccionado);
+console.log(comboSeleccionado.drinks);
   return (
     <>
       <div className="w-full border-t border-gray-300 "></div>
@@ -23,17 +23,23 @@ console.log(comboSeleccionado);
           </li>
           <li>
             <span className="font-semibold">Ingredientes:</span>{" "}
-            {/* {comboSeleccionado?.ingredients.join(", ")} */}
+            {comboSeleccionado?.ingredients
+              .map((ing) => `${ing.name} (${ing.cant}u)`)
+              .join(", ")}
           </li>
           <li>
             <span className="font-semibold">Bebida:</span>{" "}
-            {/* {comboSeleccionado.drink} */}
+            {comboSeleccionado?.drinks
+              .map((dri) => `${dri.name} (${dri.cant}u)`)
+              .join(", ")}
           </li>
           <li>
-            <span className="font-semibold">Precio total:</span> $ {comboSeleccionado.totalPrice}
+            <span className="font-semibold">Precio total:</span> ${" "}
+            {comboSeleccionado.totalPrice}
           </li>
           <li>
-            <span className="font-semibold">Calorías totales:</span> {comboSeleccionado.totalCal} kcal
+            <span className="font-semibold">Calorías totales:</span>{" "}
+            {comboSeleccionado.totalCal} kcal
           </li>
         </ul>
       </div>

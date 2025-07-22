@@ -1,12 +1,12 @@
 'use client';
-import { useSelector } from 'react-redux';
+import { seleccionarIngredientes } from '@/store/slices/comboSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Ingredients = () => {
   const ingredients = useSelector((state) => state.combo.ingredients);
-  
-  const handleSelect = (id) => {
-    // setSelectedBaseId(id);
-    console.log("Ingredients seleccionada:", id);
+  const dispatch = useDispatch()
+  const handleSelect = (ingredient) => {
+    dispatch(seleccionarIngredientes(ingredient));
   };
 
   return (

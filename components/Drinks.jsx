@@ -1,12 +1,13 @@
 'use client';
-import { useSelector } from 'react-redux';
+import { seleccionarDrinks } from '@/store/slices/comboSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Drinks = () => {
   const drinks = useSelector((state) => state.combo.drinks);
+  const dispatch = useDispatch()
 
-  const handleSelect = (id) => {
-    // setSelectedBaseId(id);
-    console.log("drinks seleccionada:", id);
+  const handleSelect = (drink) => {
+    dispatch(seleccionarDrinks(drink))
   };
   return (
     <div>
