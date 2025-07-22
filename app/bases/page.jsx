@@ -1,6 +1,7 @@
 import Bases from "@/components/Bases";
 import ComboPreview from "@/components/ComboPreview";
 import Next from "@/components/Next";
+import NombreInput from "@/components/NombreInput";
 
 const Page = () => {
   return (
@@ -14,7 +15,9 @@ const Page = () => {
           más se adapte a tu antojo: ¿simple, doble, veggie o de pollo?.
         </p>
       </div>
-      <div className="m-2 flex justify-end lg:px-22">
+      {/* <div className="m-2 flex justify-end lg:px-22"> */}
+      <div className="m-5 flex justify-between items-center max-w-7xl ">
+        <NombreInput />
         <Next url={"/ingredientes"} />
       </div>
       <div className="grid max-w-7xl gap-20 px-6 lg:px-8 mt-12 bg-sky-200">

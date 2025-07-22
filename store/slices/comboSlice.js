@@ -87,17 +87,14 @@ const initialState = {
     },
   ],
   selectedCombo: {
+    name:null,
     base: null,
     ingredients: [],
     drink: null,
     totalPrice: 0,
     totalCal: 0,
+
   },
-  // selectedCombo: {
-  //   base: "Hamburguesa doble",
-  //   ingredients: ["Queso", "Lechuga", "Tomate"],
-  //   drink: "Coca-Cola"
-  // },
 };
 
 const comboSlice = createSlice({
@@ -111,7 +108,21 @@ const comboSlice = createSlice({
       state.selectedCombo.totalCal =action.payload.cal
      },
 
+     ingresarNombre:(state, action) => {
+      state.selectedCombo.name = action.payload;
+     },
 
+     LimpiarSelectedCombo:(state) => {
+      state.selectedCombo =  {
+        name:null,
+        base: null,
+        ingredients: [],
+        drink: null,
+        totalPrice: 0,
+        totalCal: 0,
+      }
+     },
+     
   }
 })
 /* 
@@ -174,6 +185,6 @@ export const {
   clearCombo, 
 } = comboSlice.actions; */
 
-export const {seleccionarBase}=comboSlice.actions;
+export const { seleccionarBase, ingresarNombre, LimpiarSelectedCombo } = comboSlice.actions;
 
 export default comboSlice.reducer;

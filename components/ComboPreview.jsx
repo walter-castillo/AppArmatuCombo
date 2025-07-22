@@ -12,6 +12,10 @@ console.log(comboSeleccionado);
         <h3 className="text-xl font-bold mb-4 text-gray-800">
           Tu combo actual
         </h3>
+        <p className="mb-4 text-lg text-gray-900">
+          <span className="font-semibold">Nombre del combo:</span>{" "}
+          {comboSeleccionado.name}
+        </p>
         <ul className="text-gray-700 space-y-2">
           <li>
             <span className="font-semibold">Base:</span>{" "}
