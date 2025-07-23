@@ -1,4 +1,3 @@
-// import { connectDB } from "@/lib/mongodb"
 // import Producto from "@/models/Producto"
 // import { NextResponse } from "next/server"
 
