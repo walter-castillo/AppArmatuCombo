@@ -16,7 +16,7 @@ const Page = () => {
         </p>
       </div>
       {/* <div className="m-2 flex justify-end lg:px-22"> */}
-      <div className="my-2 flex justify-between items-center max-w-7xl ">
+      <div className="m-5  flex justify-between items-center max-w-7xl ">
         <NombreInput />
         <Next url={"/ingredientes"} />
       </div>
