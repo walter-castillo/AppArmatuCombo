@@ -1,12 +1,12 @@
 import Back from "@/components/Back";
 import ComboPreview from "@/components/ComboPreview";
 import Drinks from "@/components/Drinks";
-import FinalizarButton from "@/components/FinalizarButton";
 import NewCombo from "@/components/NewCombo";
+import Next from "@/components/Next";
 
 const page = () => {
   return (
-    <div className="py-24 max-w-7xl container mx-auto px-6">
+    <div className="py-14 max-w-7xl container mx-auto px-6">
       <div>
         <h2 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
           Paso 3: Elegí tu bebida
@@ -20,7 +20,7 @@ const page = () => {
       <div className="m-4 flex justify-between">
         <Back url={"/ingredientes"} />
         {/* <NewCombo /> */}
-        <FinalizarButton />
+        <Next url={'/base'} finalizar={'Finalizar'} />
       </div>
       <div className="grid max-w-7xl gap-20 px-6 lg:px-8  bg-sky-200">
         <Drinks />

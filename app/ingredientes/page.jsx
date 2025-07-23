@@ -5,7 +5,7 @@ import Next from "@/components/Next";
 
 const page = () => {
   return (
-    <div className="py-24 max-w-7xl container mx-auto px-6">
+    <div className="py-14 max-w-7xl container mx-auto px-6">
       <div>
         <h2 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
           Paso 2: Personalizá tus ingredientes
