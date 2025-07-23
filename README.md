@@ -29,12 +29,12 @@ Todo con un **sistema de carrito de compras** integrado y una interfaz intuitiva
 - **PDF Generator:** jsPDF
 - **Despliegue:** Vercel
 
-
+---
 🚀 **Características principales**
 Esta aplicación web permite a los usuarios crear combos personalizados de hamburguesas seleccionando ingredientes, acompañamientos y bebidas. Incluye un sistema de carrito de compras para revisar y modificar el pedido antes de finalizar la compra. La interfaz es intuitiva y fácil de usar, pensada para ofrecer una experiencia divertida y práctica al armar tu combo ideal.
 
 
-
+---
 📌 **Instalación**
 
 Clona el repositorio:
@@ -47,6 +47,7 @@ npm install
 Ejecuta el proyecto:
 npm start  
 
+---
 📸 **Capturas de Pantalla**
 
 En la siguiente imagen se muestra la pantalla inicial, donde el usuario debe seleccionar una hamburguesa y escribir su nombre para habilitar el botón "Siguiente". Sin completar ambos campos, no es posible avanzar al siguiente paso.
@@ -65,11 +66,16 @@ En la última imagen se muestra el ticket generado por la aplicación, donde se 
 
 ![alt text](image-3.png)
 
+---
 🔗 **Demo**
 🔜 https://app-armatu-combo.vercel.app/
 
+
+---
 🤝 **Contribuciones**
 ¡Las contribuciones son bienvenidas! Abre un issue o envía un pull request.
 
+
+---
 📜 **Licencia**
 MIT License © 2025 -** Walter Castillo**
