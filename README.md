@@ -1,13 +1,38 @@
-🍔 # Proyecto: "Arma Tu Combo de Hamburguesas" 
-¡Bienvenido al proyecto "Arma Tu Combo de Hamburguesas"! Esta aplicación permite a los usuarios personalizar su combo de hamburguesas eligiendo ingredientes, acompañamientos y bebidas, con un sistema de carrito de compras integrado.
+# 🍔 Proyecto: "Arma Tu Combo de Hamburguesas"
+
+¡Bienvenido al proyecto **"Arma Tu Combo de Hamburguesas"**!
+
+Esta aplicación permite a los usuarios **personalizar su combo de hamburguesas** eligiendo:
+
+- 🥩 Ingredientes
+- 🍟 Acompañamientos
+- 🥤 Bebidas
+
+Todo con un **sistema de carrito de compras** integrado y una interfaz intuitiva para armar tu pedido como en una app de fast food real.
+
+---
+
+## 🚀 Características principales
+
+- Selección dinámica de ingredientes
+- Visualización en tiempo real del combo
+- Cálculo de calorías y precio total
+- Exportación del pedido a PDF
+- Navegación estilo wizard (paso a paso)
+
+---
+
+## 🧑‍💻 Stack Tecnológico
+
+- **Frontend:** Next.js (App Router), JavaScript, Tailwind CSS
+- **Estado global:** Redux Toolkit
+- **PDF Generator:** jsPDF
+- **Despliegue:** Vercel
+
 
 🚀 **Características principales**
 Esta aplicación web permite a los usuarios crear combos personalizados de hamburguesas seleccionando ingredientes, acompañamientos y bebidas. Incluye un sistema de carrito de compras para revisar y modificar el pedido antes de finalizar la compra. La interfaz es intuitiva y fácil de usar, pensada para ofrecer una experiencia divertida y práctica al armar tu combo ideal.
 
-
-🛠️ **Tecnologías utilizadas**
-
-Este proyecto está desarrollado con **Next.js** , **Redux Toolkit** para la gestión eficiente del estado global y **Tailwind CSS** para el diseño de la interfaz de usuario con estilos modernos y personalizables.
 
 
 📌 **Instalación**
