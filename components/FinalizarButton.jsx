@@ -15,9 +15,15 @@ const FinalizarButton = () => {
       unit: "mm",
       format: [250, 150],
     });
+    const fecha = new Date().toLocaleString();
+    const numeroPedido = Math.floor(Math.random() * 1000000);
 
+    doc.setFontSize(10);
+    doc.text(`Fecha: ${fecha}`, 100, 10);
+    doc.text(`N° Pedido: ${numeroPedido}`, 100, 16);
     doc.setFontSize(14);
-    doc.text("Resumen de tu combo", 10, 20);
+    doc.text("Resumen de tu combo", 50, 23);
+    doc.setFontSize(12)
     doc.text(`Nombre: ${comboSeleccionado.name}`, 10, 30);
 
     doc.setFontSize(12);
@@ -29,7 +35,7 @@ const FinalizarButton = () => {
     doc.setFontSize(12);
     doc.text(`Bebida:`, 10, 65);
     doc.setFontSize(10);
-    doc.text(`Bebida: ${comboSeleccionado.drinks.map((ing) => `${ing.name} (${ing.cant}u)`).join(", ")}`, 12, 70 );
+    doc.text(`${comboSeleccionado.drinks.map((ing) => `${ing.name} (${ing.cant}u)`).join(", ")}`, 12, 70 );
 
     doc.text(`Calorias: ${comboSeleccionado.totalCal} - Kcal`, 10, 80);
     
@@ -38,8 +44,8 @@ const FinalizarButton = () => {
 
     doc.save("combo-resumen.pdf");
 
-    // router.push("/bases");
-    // dispatch(LimpiarSelectedCombo());
+    router.push("/bases");
+    dispatch(LimpiarSelectedCombo());
   };
 
   return (

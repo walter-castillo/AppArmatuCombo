@@ -47,7 +47,7 @@ export default function Combo() {
     <>
       <h2 className="text-xl font-bold">Armá tu Combo 🍟</h2>
 
-      {/* Base */}
+
       <div>
         <h3 className="font-semibold">Base:</h3>
         <div className="flex flex-wrap gap-2">

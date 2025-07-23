@@ -13,7 +13,7 @@ const Back = ({url}) => {
       passHref
     >
       <span
-        className="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-100 rounded-xl hover:bg-gray-200 transition cursor-pointer inline-block"
+        className="px-4 py-2 text-xs md:px-6 md:py-2 md:text-sm font-medium text-gray-700 bg-gray-100 rounded-xl hover:bg-gray-200 transition cursor-pointer inline-block"
         onClick={() => console.log("Volver al paso anterior", pathName)}
       >
         ← Atrás

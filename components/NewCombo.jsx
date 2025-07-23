@@ -6,7 +6,8 @@ const NewCombo = () => {
   return (
     <Link
       href="/bases"
-      className="inline-block px-6 py-3 text-sm font-medium text-gray-700 bg-lime-400 rounded-xl hover:bg-lime-500 transition"
+      className=" text-xs px-3 py-3 md:text-base md:px-2 md:py-1 inline-block  font-medium text-gray-700 bg-lime-400 rounded-xl hover:bg-lime-500 transition"
+      
       onClick={() => console.log("Nuevo combo")}
     >
       Agregar combo

@@ -38,35 +38,35 @@ const initialState = {
       name: "Queso",
       price: 200,
       cal: 100,
-      image: "./ingredients/queso.jpg",
+      image: "./ingredients/queso.png",
     },
     {
       id: 2,
       name: "Bacon",
       price: 300,
       cal: 150,
-      image: "./ingredients/bacon.jpg",
+      image: "./ingredients/bacon.png",
     },
     {
       id: 3,
       name: "Lechuga",
       price: 100,
       cal: 20,
-      image: "./ingredients/lechuga.jpg",
+      image: "./ingredients/lechuga.png",
     },
     {
       id: 4,
       name: "Tomate",
       price: 100,
       cal: 30,
-      image: "./ingredients/tomate.jpg",
+      image: "./ingredients/tomate.png",
     },
     {
-      id: 7,
+      id: 5,
       name: "Huevo",
       price: 250,
       cal: 90,
-      image: "./ingredients/huevo.jpg",
+      image: "./ingredients/huevo.png",
     },
   ],
   drinks: [
@@ -75,25 +75,24 @@ const initialState = {
       name: "Coca-Cola",
       price: 500,
       cal: 200,
-      image: "./drinks/coca.jpg",
+      image: "./drinks/coca.png",
     },
-    { id: 2, name: "Agua", price: 300, cal: 0, image: "./drinks/agua.jpg" },
+    { id: 2, name: "Agua", price: 300, cal: 0, image: "./drinks/agua.png" },
     {
       id: 3,
       name: "Sprite",
       price: 500,
       cal: 180,
-      image: "./drinks/sprite.jpg",
+      image: "./drinks/sprite.png",
     },
   ],
   selectedCombo: {
-    name:null,
+    name: null,
     base: null,
     ingredients: [],
     drinks: [],
     totalPrice: 0,
     totalCal: 0,
-
   },
 };
 
@@ -140,6 +139,22 @@ const comboSlice = createSlice({
       state.selectedCombo.totalCal += calFront;
     },
 
+    restarIngredientes: (state, action) => {
+      const index = state.selectedCombo.ingredients.findIndex(ing=> ing.id === action.payload.id)
+      if (index !== -1) {
+        if (state.selectedCombo.ingredients[index].cant<=1) {
+          state.selectedCombo.ingredients.splice(index, 1);
+        }  else{
+          state.selectedCombo.ingredients[index].cant-=1
+        }  
+      }
+      state.selectedCombo.totalPrice -= action.payload.price;
+      state.selectedCombo.totalCal -= action.payload.cal;
+
+    },
+
+   
+
     seleccionarDrinks: (state, action) => {
       const {
         id: idFront,
@@ -169,6 +184,19 @@ const comboSlice = createSlice({
       state.selectedCombo.totalCal += calFront;
     },
 
+    restarBebidas: (state, action) => {
+      const index = state.selectedCombo.drinks.findIndex(dri=> dri.id === action.payload.id);
+      if (index !== -1) {
+        if (state.selectedCombo.drinks[index].cant<=1) {
+          state.selectedCombo.drinks.splice(index, 1);
+        }  else{
+          state.selectedCombo.drinks[index].cant-=1
+        }  
+      }
+      state.selectedCombo.totalPrice -= action.payload.price;
+      state.selectedCombo.totalCal -= action.payload.cal;
+    },
+
     LimpiarSelectedCombo: (state) => {
       state.selectedCombo = {
         name: null,
@@ -181,71 +209,14 @@ const comboSlice = createSlice({
     },
   },
 });
-/* 
-selectBase: (state, action) => {
-      state.selectedCombo.base = action.payload;
-      comboSlice.caseReducers.recalculateTotals(state);
-    },
-    toggleIngredient: (state, action) => {
-      const id = action.payload.id;
-      const exists = state.selectedCombo.ingredients.find((i) => i.id === id);
-      if (exists) {
-        state.selectedCombo.ingredients = state.selectedCombo.ingredients.filter(
-          (i) => i.id !== id
-        );
-      } else {
-        state.selectedCombo.ingredients.push(action.payload);
-      }
-      comboSlice.caseReducers.recalculateTotals(state);
-    },
-    selectDrink: (state, action) => {
-      state.selectedCombo.drink = action.payload;
-      comboSlice.caseReducers.recalculateTotals(state);
-    },
-    clearCombo: (state) => {
-      state.selectedCombo = {
-        base: null,
-        ingredients: [],
-        drink: null,
-        totalPrice: 0,
-        totalCal: 0,
-      };
-    },
-    recalculateTotals: (state) => {
-      let total = 0;
-      let cal = 0;
-
-      if (state.selectedCombo.base) {
-        total += state.selectedCombo.base.price;
-        cal += state.selectedCombo.base.cal;
-      }
-      state.selectedCombo.ingredients.forEach((i) => {
-        total += i.price;
-        cal += i.cal;
-      });
-      if (state.selectedCombo.drink) {
-        total += state.selectedCombo.drink.price;
-        cal += state.selectedCombo.drink.cal;
-      }
-
-      state.selectedCombo.totalPrice = total;
-      state.selectedCombo.totalCal = cal;
-    }, 
-  },
-});
-
-export const {
-  selectBase,
-  toggleIngredient,
-  selectDrink,
-  clearCombo, 
-} = comboSlice.actions; */
 
 export const {
   seleccionarBase,
   ingresarNombre,
   seleccionarIngredientes,
   seleccionarDrinks,
+  restarIngredientes,
+  restarBebidas,
   LimpiarSelectedCombo,
 } = comboSlice.actions;
 

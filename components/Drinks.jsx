@@ -1,18 +1,27 @@
 'use client';
-import { seleccionarDrinks } from '@/store/slices/comboSlice';
+import { restarBebidas, seleccionarDrinks } from '@/store/slices/comboSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import Quitar from './Quitar';
 
 const Drinks = () => {
   const drinks = useSelector((state) => state.combo.drinks);
+  const drinksSelected = useSelector(state => state.combo.selectedCombo.drinks)
   const dispatch = useDispatch()
 
   const handleSelect = (drink) => {
     dispatch(seleccionarDrinks(drink))
   };
+
+  const handleRemove = (drink) => { dispatch(restarBebidas(drink))};
+
   return (
     <div>
       <ul role="list" className="grid  sm:grid-cols-2  xl:grid-cols-2">
-        {drinks.map((drink) => (
+        {drinks.map((drink) => {
+        const yaSeleccionado = drinksSelected.find(
+          (item) => item.id === drink.id
+        );
+        return (
           <li key={drink.id} className="m-6">
             <div className="flex items-center">
               <img
@@ -28,10 +37,14 @@ const Drinks = () => {
                 <p className="text-sm/6 font-semibold text-indigo-600">
                   {drink.price}$ - {drink.cal}cal
                 </p>
+                {yaSeleccionado && (
+                  <Quitar onClick={() =>handleRemove(drink)} />
+                )}
               </div>
             </div>
           </li>
-        ))}
+        );
+      })}
       </ul>
     </div>
   );
