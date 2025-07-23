@@ -33,7 +33,7 @@ const Ingredients = () => {
                 <img
                   src={ingredient.image}
                   alt={ingredient.name}
-                  className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg"
+                  className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
                   onClick={() => handleSelect(ingredient)}
                 />
                 <div className="ml-4">

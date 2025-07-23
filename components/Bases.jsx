@@ -19,7 +19,7 @@ const Bases = () => {
               <img
                 src={base.image}
                 alt={base.name}
-                className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg cursor-pointer"
+                className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
                 onClick={() => handleSelect(base)}
               />
               <div className="ml-4">

@@ -27,7 +27,7 @@ const Drinks = () => {
               <img
                 src={drink.image}
                 alt={drink.name}
-                className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg"
+                className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
                 onClick={() => handleSelect(drink)}
               />
               <div className="ml-4">
@@ -38,8 +38,10 @@ const Drinks = () => {
                   {drink.price}$ - {drink.cal}cal
                 </p>
                 {yaSeleccionado && (
-                  <Quitar onClick={() =>handleRemove(drink)} cant={yaSeleccionado.cant} />
-
+                  <Quitar
+                    onClick={() => handleRemove(drink)}
+                    cant={yaSeleccionado.cant}
+                  />
                 )}
               </div>
             </div>
