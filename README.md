@@ -51,7 +51,10 @@ Ejecuta el proyecto:
 bash
 npm start  
 📸 Capturas de Pantalla
-(Incluir imágenes de la interfaz aquí)
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 
 🔗 Demo
 🔜 https://app-armatu-combo.vercel.app/combo
