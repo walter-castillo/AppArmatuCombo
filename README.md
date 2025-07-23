@@ -1,4 +1,4 @@
-🍔 ##Proyecto: "Arma Tu Combo de Hamburguesas"##
+🍔 # Proyecto: "Arma Tu Combo de Hamburguesas" 
 ¡Bienvenido al proyecto "Arma Tu Combo de Hamburguesas"! Esta aplicación permite a los usuarios personalizar su combo de hamburguesas eligiendo ingredientes, acompañamientos y bebidas, con un sistema de carrito de compras integrado.
 
 🚀 **Características principales**
