@@ -21,7 +21,7 @@ const Next = ({ url, finalizar }) => {
     return (
       <button
         disabled
-        className="px-1 mx-1 py-2 text-xs whitespace-nowrap text-white bg-gray-400 rounded-xl cursor-not-allowed"
+        className="px-2 mx-1 py-2 text-xs whitespace-nowrap text-white bg-gray-400 rounded-xl cursor-not-allowed"
       >
         Siguiente →
       </button>
@@ -33,7 +33,7 @@ const Next = ({ url, finalizar }) => {
       <Link
         href={"/bases"}
         onClick={handleFinalizar}
-        className="px-1 py-2 text-xs whitespace-nowrap text-white bg-green-600 rounded-xl hover:bg-green-700 transition  cursor-pointer"
+        className="px-2 py-2 text-xs whitespace-nowrap text-white bg-green-600 rounded-xl hover:bg-green-700 transition  cursor-pointer"
       >
         Finalizar
       </Link>
@@ -43,7 +43,7 @@ const Next = ({ url, finalizar }) => {
   return (
     <Link
       href={url || pathName}
-      className="px-1 py-2 text-xs whitespace-nowrap text-white bg-yellow-500 rounded-xl hover:bg-yellow-600 transition cursor-pointer"
+      className="px-2 py-2 text-xs whitespace-nowrap text-white bg-yellow-500 rounded-xl hover:bg-yellow-600 transition cursor-pointer"
     >
       Siguiente →
     </Link>
