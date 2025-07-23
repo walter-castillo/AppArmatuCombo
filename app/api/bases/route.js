@@ -43,6 +43,15 @@ export async function GET(){
     }
 }
 
+  
+export function POST(req) {
+  try{
+    console.log(req);
+  }catch{
+
+  }
+  
+}
 
 // //POST crear nuevo producto
 // export async function POST(req){

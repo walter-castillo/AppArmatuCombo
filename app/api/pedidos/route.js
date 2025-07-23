@@ -21,6 +21,8 @@ export async function GET(){
 }
 
 
+
+
 // //POST crear nuevo producto
 // export async function POST(req){
 //      await connectDB()

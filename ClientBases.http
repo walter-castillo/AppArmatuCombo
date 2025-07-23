@@ -10,10 +10,109 @@ GET {{host}}/bases
 Content-Type: application/json
 
 ###
+GET {{host}}/ingredientes
+Content-Type: application/json
+
+
+###
 GET {{host}}/bebidas
 Content-Type: application/json
 
 
 ###
-GET {{host}}/ingredientes
+GET {{host}}/pedidos
 Content-Type: application/json
+
+
+###
+
+# Obtener un usuario específico por ID
+GET {{host}}/user/{id}
+
+
+###
+
+# Actualizar un usuario existente por ID
+PUT {{host}}/users/{id}
+
+###
+
+# Eliminar un usuario por ID
+DELETE {{host}}/users/{id}
+
+###
+
+# Get all users
+GET {{host}}/users
+
+###
+
+# Get a specific user by ID
+GET {{host}}/users/{id}
+
+###
+
+# Create a new user
+POST {{host}}/users
+
+###
+
+# Update an existing user by ID
+PUT {{host}}/users/{id}
+
+###
+
+# Delete a user by ID
+DELETE {{host}}/users/{id}
+
+###
+
+# Get all permissions
+GET {{host}}/permissions
+
+###
+
+# Get a specific permission by ID
+GET {{host}}/permissions/{id}
+
+###
+
+# Create a new permission
+POST {{host}}/permissions
+
+###
+
+# Update an existing permission by ID
+PUT {{host}}/permissions/{id}
+
+###
+
+# Delete a permission by ID
+DELETE {{host}}/permissions/{id}
+
+###
+
+# Get all roles
+GET {{host}}/roles
+
+###
+
+# Get a specific role by ID
+GET {{$baseUrl}}/roles/{id}
+
+###
+
+# Create a new role
+POST {{$baseUrl}}/roles
+
+###
+
+# Update an existing role by ID
+PUT {{$baseUrl}}/roles/{id}
+
+###
+
+# Delete a role by ID
+DELETE /api/roles/{id}
+
+
