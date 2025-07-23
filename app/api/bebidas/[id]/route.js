@@ -2,57 +2,38 @@
 import { NextResponse } from "next/server"
 
 
-let Bases= [
-      {
-        id: 1,
-        name: "Single",
-        price: 1000,
-        cal: 400,
-        image: "./bases/simple.png",
-      },
-      {
-        id: 2,
-        name: "Double Patty",
-        price: 1400,
-        cal: 700,
-        image: "./bases/doble.png",
-      },
-      {
-        id: 3,
-        name: "Vegan",
-        price: 1200,
-        cal: 350,
-        image: "./bases/simple.png",
-      },
-      {
-        id: 4,
-        name: "Chicken",
-        price: 1300,
-        cal: 500,
-        image: "./bases/pollo.png",
-      },
-    ]
+let Drinks = [
+  {
+    id: 1,
+    name: "Coca-Cola",
+    price: 500,
+    cal: 200,
+    image: "./drinks/coca.png",
+  },
+  { id: 2, name: "Agua", price: 300, cal: 0, image: "./drinks/agua.png" },
+  {
+    id: 3,
+    name: "Sprite",
+    price: 500,
+    cal: 180,
+    image: "./drinks/sprite.png",
+  },
+];
 
-export async function GET(){
-      console.log('desde get bases');
-    try {
-        const bases = await Bases
-        return NextResponse.json(bases, {status:200})
-    } catch (error) {
-        return NextResponse.json({error:"Error en el servidor"}, {status: 500})
-    }
-}
 
-  
+ 
 export async function GET(_,{params}) {
-  const { id } = params
+  const { id } = await params;
   try{
-      // const base = await Bases.find(base=>)
-    console.log(params);
-    return NextResponse.json(
-      { params, msg: "creado exitosamente" },
-      { status: 201 }
-    );
+    const drink = await Drinks.find((p) => p.id === parseInt(id));
+
+    if (!drink) {
+      return NextResponse.json(
+        { error: "Bebida no encontrada" },
+        { status: 404 }
+      );
+    }
+    return NextResponse.json( drink,{ status: 200 } );
   }catch{
     return NextResponse.json({error:"Error en el servidor"}, {status: 500})
   }

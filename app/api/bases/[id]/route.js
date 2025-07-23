@@ -33,26 +33,15 @@ let Bases= [
       },
     ]
 
-export async function GET(){
-      console.log('desde get bases');
-    try {
-        const bases = await Bases
-        return NextResponse.json(bases, {status:200})
-    } catch (error) {
-        return NextResponse.json({error:"Error en el servidor"}, {status: 500})
-    }
-}
-
-  
+ 
 export async function GET(_,{params}) {
-  const { id } = params
+  const { id } = await params
   try{
-      // const base = await Bases.find(base=>)
-    console.log(params);
-    return NextResponse.json(
-      { params, msg: "creado exitosamente" },
-      { status: 201 }
-    );
+    const base = await Bases.find((p) => p.id === parseInt(id));
+
+    if (!base) {return NextResponse.json({ error: "Hamburguesa no encontrada" },{ status: 404 } );
+    }
+    return NextResponse.json( base,{ status: 200 } );
   }catch{
     return NextResponse.json({error:"Error en el servidor"}, {status: 500})
   }

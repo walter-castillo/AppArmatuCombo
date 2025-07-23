@@ -2,57 +2,57 @@
 import { NextResponse } from "next/server"
 
 
-let Bases= [
-      {
-        id: 1,
-        name: "Single",
-        price: 1000,
-        cal: 400,
-        image: "./bases/simple.png",
-      },
-      {
-        id: 2,
-        name: "Double Patty",
-        price: 1400,
-        cal: 700,
-        image: "./bases/doble.png",
-      },
-      {
-        id: 3,
-        name: "Vegan",
-        price: 1200,
-        cal: 350,
-        image: "./bases/simple.png",
-      },
-      {
-        id: 4,
-        name: "Chicken",
-        price: 1300,
-        cal: 500,
-        image: "./bases/pollo.png",
-      },
-    ]
+let Ingredients = [
+  {
+    id: 1,
+    name: "Queso",
+    price: 200,
+    cal: 100,
+    image: "./ingredients/queso.png",
+  },
+  {
+    id: 2,
+    name: "Bacon",
+    price: 300,
+    cal: 150,
+    image: "./ingredients/bacon.png",
+  },
+  {
+    id: 3,
+    name: "Lechuga",
+    price: 100,
+    cal: 20,
+    image: "./ingredients/lechuga.png",
+  },
+  {
+    id: 4,
+    name: "Tomate",
+    price: 100,
+    cal: 30,
+    image: "./ingredients/tomate.png",
+  },
+  {
+    id: 5,
+    name: "Huevo",
+    price: 250,
+    cal: 90,
+    image: "./ingredients/huevo.png",
+  },
+];
 
-export async function GET(){
-      console.log('desde get bases');
-    try {
-        const bases = await Bases
-        return NextResponse.json(bases, {status:200})
-    } catch (error) {
-        return NextResponse.json({error:"Error en el servidor"}, {status: 500})
-    }
-}
-
-  
+ 
 export async function GET(_,{params}) {
-  const { id } = params
+  const { id } = await params;
   try{
-      // const base = await Bases.find(base=>)
-    console.log(params);
-    return NextResponse.json(
-      { params, msg: "creado exitosamente" },
-      { status: 201 }
-    );
+    const ingredient = await Ingredients.find((p) => p.id === parseInt(id));
+
+    if (!ingredient) {
+      return NextResponse.json(
+        { error: "Producto no encontrado" },
+        { status: 404 }
+      );
+    }
+    return NextResponse.json(ingredient, { status: 200});
   }catch{
     return NextResponse.json({error:"Error en el servidor"}, {status: 500})
   }

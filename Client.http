@@ -9,8 +9,19 @@
 GET {{host}}/bases
 Content-Type: application/json
 
+
+###
+GET {{host}}/bases/1
+Content-Type: application/json
+
+
 ###
 GET {{host}}/ingredientes
+Content-Type: application/json
+
+
+###
+GET {{host}}/ingredientes/1
 Content-Type: application/json
 
 
@@ -20,8 +31,50 @@ Content-Type: application/json
 
 
 ###
+GET {{host}}/bebidas/1
+Content-Type: application/json
+
+
+###
 GET {{host}}/pedidos
 Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ###
