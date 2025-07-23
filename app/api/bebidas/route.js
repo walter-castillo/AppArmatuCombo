@@ -1,19 +1,32 @@
 // import Producto from "@/models/Producto"
-// import { NextResponse } from "next/server"
+import { NextResponse } from "next/server"
 
+let Drinks= [
+  {
+    id: 1,
+    name: "Coca-Cola",
+    price: 500,
+    cal: 200,
+    image: "./drinks/coca.png",
+  },
+  { id: 2, name: "Agua", price: 300, cal: 0, image: "./drinks/agua.png" },
+  {
+    id: 3,
+    name: "Sprite",
+    price: 500,
+    cal: 180,
+    image: "./drinks/sprite.png",
+  },
+]
 
-// let productos = [ {id:1, nombre:"Notebook", precio:4000}, {id:2, nombre: "Teclado 60H", precio:250}]
-
-// //Get: enviar informacion al frontend
-// export async function GET(){
-//     await connectDB()
-//     try {
-//         const productos = await Producto.find()
-//         return NextResponse.json(productos, {status:200})
-//     } catch (error) {
-//         return NextResponse.json({error:"Error en el servidor"}, {status: 500})
-//     }
-// }
+export async function GET(){
+    try {
+        const drinks = await Drinks
+        return NextResponse.json(drinks, {status:200})
+    } catch (error) {
+        return NextResponse.json({error:"Error en el servidor"}, {status: 500})
+    }
+}
 
 
 // //POST crear nuevo producto

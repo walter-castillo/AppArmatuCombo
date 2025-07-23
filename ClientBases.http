@@ -1,0 +1,19 @@
+
+@hostname = http://localhost
+@port = 3000
+@host = {{hostname}}:{{port}}/api
+
+# Obtener las hamburguesas
+
+###
+GET {{host}}/bases
+Content-Type: application/json
+
+###
+GET {{host}}/bebidas
+Content-Type: application/json
+
+
+###
+GET {{host}}/ingredientes
+Content-Type: application/json
