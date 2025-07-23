@@ -153,8 +153,6 @@ const comboSlice = createSlice({
 
     },
 
-   
-
     seleccionarDrinks: (state, action) => {
       const {
         id: idFront,

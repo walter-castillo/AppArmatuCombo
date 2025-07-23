@@ -5,7 +5,7 @@ const Quitar = ({ onClick, cant }) => {
     <div className="flex">
       <button
         onClick={onClick}
-        className="px-3 py-1 text-xs whitespace-nowrap  bg-red-100 text-red-700 rounded-md hover:bg-red-200 transition  cursor-pointer"
+        className="px-1 py-1 text-xs whitespace-nowrap  bg-red-100 text-red-700 rounded-md hover:bg-red-200 transition  cursor-pointer"
       >
         - Quitar
       </button>
