@@ -46,6 +46,7 @@ En esta pantalla, el usuario puede seleccionar una bebida para completar su comb
 ![alt text](image-2.png)
 
 En la última imagen se muestra el ticket generado por la aplicación, donde se detallan los productos seleccionados, el precio total y el total de calorías del combo. Esta pantalla permite al usuario revisar el resumen de su compra antes de finalizar el pedido.
+
 ![alt text](image-3.png)
 
 🔗 Demo
