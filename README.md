@@ -2,9 +2,9 @@
 
 ¡Bienvenido al proyecto **"Arma Tu Combo de Hamburguesas"**!
 
-Esta aplicación permite a los usuarios **personalizar su combo de hamburguesas** eligiendo:
+Esta aplicación permite a los usuarios **personalizar su combo de hamburguesas** eligiendo y agregando:
 
-- 🥩 Ingredientes
+- 🥩 Ingredientes 
 - 🍟 Acompañamientos
 - 🥤 Bebidas
 
@@ -72,7 +72,7 @@ En la última imagen se muestra el ticket generado por la aplicación, donde se 
 🔗 **Demo**
 🔜 https://app-armatu-combo.vercel.app/
 
-
+  
 ---
 🤝 **Contribuciones**
 ¡Las contribuciones son bienvenidas! Abre un issue o envía un pull request.
