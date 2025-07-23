@@ -45,7 +45,10 @@ const Ingredients = () => {
                   </p>
 
                   {yaSeleccionado && (
-                    <Quitar onClick={() => handleRemove(ingredient)} />
+                    <Quitar
+                      onClick={() => handleRemove(ingredient)}
+                      cant={yaSeleccionado.cant}
+                    />
                   )}
                 </div>
               </div>

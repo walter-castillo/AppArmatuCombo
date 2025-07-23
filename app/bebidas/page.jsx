@@ -3,7 +3,6 @@ import ComboPreview from "@/components/ComboPreview";
 import Drinks from "@/components/Drinks";
 import FinalizarButton from "@/components/FinalizarButton";
 import NewCombo from "@/components/NewCombo";
-import Link from "next/link";
 
 const page = () => {
   return (
@@ -18,7 +17,7 @@ const page = () => {
         </p>
       </div>
 
-      <div className="m-5 flex justify-between">
+      <div className="m-4 flex justify-between">
         <Back url={"/ingredientes"} />
         {/* <NewCombo /> */}
         <FinalizarButton />

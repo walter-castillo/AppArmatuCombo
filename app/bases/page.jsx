@@ -16,11 +16,11 @@ const Page = () => {
         </p>
       </div>
       {/* <div className="m-2 flex justify-end lg:px-22"> */}
-      <div className="m-5 flex justify-between items-center max-w-7xl ">
+      <div className="my-2 flex justify-between items-center max-w-7xl ">
         <NombreInput />
         <Next url={"/ingredientes"} />
       </div>
-      <div className="grid max-w-7xl gap-20 px-6 lg:px-8 mt-12 bg-sky-200">
+      <div className="grid max-w-7xl gap-20 px-6 lg:px-8 mt-5 bg-sky-200">
         <Bases />
       </div>
       <ComboPreview />

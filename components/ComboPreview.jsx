@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 const ComboPreview = () => {
 const comboSeleccionado = useSelector((state) => state.combo.selectedCombo);
-console.log(comboSeleccionado.drinks);
   return (
     <>
       <div className="w-full border-t border-gray-300 "></div>

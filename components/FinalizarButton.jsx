@@ -51,7 +51,7 @@ const FinalizarButton = () => {
   return (
     <button
       onClick={generarPDF}
-      className="px-4 py-1  mr-1 text-sm font-medium text-white bg-green-600 rounded-xl hover:bg-green-700 transition"
+      className="px-4 py-1  mr-1 text-sm font-medium text-white bg-green-600 rounded-xl hover:bg-green-700 transition  cursor-pointer i"
     >
       Finalizar
     </button>

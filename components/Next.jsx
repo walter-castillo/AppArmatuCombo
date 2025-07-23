@@ -9,10 +9,10 @@ const Next = ({ url }) => {
 
   const selectedCombo = useSelector((state) => state.combo.selectedCombo);
 
-  return (!selectedCombo.base || !selectedCombo.name) ? (
+  return !selectedCombo.base || !selectedCombo.name ? (
     <button
       disabled
-      className="px-2 py-2 text-xs font-medium text-white bg-gray-400 rounded-xl cursor-not-allowed mx-2 md:mx-0 md:px-2 md:py-1 md:text-sm"
+      className="px-1 mx-1 py-2 text-xs whitespace-nowrap text-white bg-gray-400 rounded-xl cursor-not-allowed"
     >
       Siguiente →
     </button>
@@ -20,7 +20,7 @@ const Next = ({ url }) => {
     <Link
       href={url || pathName}
       onClick={() => console.log("Ir al paso siguiente", pathName)}
-      className="px-2 py-2 text-xs font-medium text-white bg-yellow-500 rounded-xl hover:bg-yellow-600 transition mx-2 md:mx-0 md:px-2 md:py-1 md:text-sm"
+      className="px-1 py-2 text-xs whitespace-nowrap text-white bg-yellow-500 rounded-xl hover:bg-yellow-600 transition  cursor-pointer"
     >
       Siguiente →
     </Link>

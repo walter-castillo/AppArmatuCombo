@@ -1,7 +1,7 @@
 'use client';
 import { restarBebidas, seleccionarDrinks } from '@/store/slices/comboSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import Quitar from './Quitar';
+import Quitar from '@/components/Quitar';
 
 const Drinks = () => {
   const drinks = useSelector((state) => state.combo.drinks);
@@ -38,7 +38,8 @@ const Drinks = () => {
                   {drink.price}$ - {drink.cal}cal
                 </p>
                 {yaSeleccionado && (
-                  <Quitar onClick={() =>handleRemove(drink)} />
+                  <Quitar onClick={() =>handleRemove(drink)} cant={yaSeleccionado.cant} />
+
                 )}
               </div>
             </div>
