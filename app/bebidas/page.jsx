@@ -4,6 +4,37 @@ import Drinks from "@/components/Drinks";
 import NewCombo from "@/components/NewCombo";
 import Next from "@/components/Next";
 
+export const metadata = {
+  title: "Armá tu Combo | Paso 3: Elegí tu bebida",
+  description:
+    "Completá tu combo con la bebida ideal. ¿Sos de gaseosa clásica, agua o jugo natural? Elegí lo que mejor acompañe tu hamburguesa.",
+  openGraph: {
+    title: "Armá tu Combo | Paso 3: Elegí tu bebida",
+    description:
+      "El toque final refrescante para tu combo: elegí entre gaseosas, aguas saborizadas o jugos. ¡Vos decidís!",
+    url: "https://app-armatu-combo.vercel.app/",
+    siteName: "ArmaTuCombo",
+    images: [
+      {
+        url: "https://app-armatu-combo.vercel.app/drinks/sprite.png",
+        width: 1200,
+        height: 630,
+        alt: "Paso 3: Elegí tu bebida",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Armá tu Combo | Paso 3",
+    description:
+      "Elegí la bebida que mejor acompañe tu combo: agua, gaseosa o algo más. ¡Refrescá tu elección!",
+    images: ["https://app-armatu-combo.vercel.app/drinks/sprite.png"],
+  },
+};
+
+
 const page = () => {
   return (
     <div className="py-14 max-w-7xl container mx-auto px-6">
