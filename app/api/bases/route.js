@@ -44,20 +44,6 @@ export async function GET(){
 }
 
   
-export async function GET(_,{params}) {
-  const { id } = params
-  try{
-      // const base = await Bases.find(base=>)
-    console.log(params);
-    return NextResponse.json(
-      { params, msg: "creado exitosamente" },
-      { status: 201 }
-    );
-  }catch{
-    return NextResponse.json({error:"Error en el servidor"}, {status: 500})
-  }
-  
-}
 
 // //POST crear nuevo producto
 // export async function POST(req){
