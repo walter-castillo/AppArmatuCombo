@@ -1,7 +1,6 @@
 import Back from "@/components/Back";
 import ComboPreview from "@/components/ComboPreview";
 import Drinks from "@/components/Drinks";
-import NewCombo from "@/components/NewCombo";
 import Next from "@/components/Next";
 
 export const metadata = {
@@ -50,7 +49,6 @@ const page = () => {
 
       <div className="m-4 flex justify-between">
         <Back url={"/ingredientes"} />
-        {/* <NewCombo /> */}
         <Next url={'/base'} finalizar={'Finalizar'} />
       </div>
       <div className="grid max-w-7xl gap-20 px-6 lg:px-8  bg-sky-200">

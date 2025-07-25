@@ -120,9 +120,7 @@ const comboSlice = createSlice({
 
       const ingredients = state.selectedCombo.ingredients;
 
-      const ingredienteExistente = ingredients.find(
-        (item) => item.id === idFront
-      );
+      const ingredienteExistente = ingredients.find((item) => item.id === idFront );
 
       if (ingredienteExistente) {
         ingredienteExistente.cant += 1;
