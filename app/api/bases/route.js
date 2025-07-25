@@ -34,7 +34,6 @@ let Bases= [
     ]
 
 export async function GET(){
-      console.log('desde get bases');
     try {
         const bases = await Bases
         return NextResponse.json(bases, {status:200})
