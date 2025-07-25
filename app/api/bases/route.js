@@ -1,4 +1,3 @@
-// import Producto from "@/models/Producto"
 import { NextResponse } from "next/server"
 
 
@@ -41,5 +40,3 @@ export async function GET(){
         return NextResponse.json({error:"Error en el servidor"}, {status: 500})
     }
 }
-
-  
