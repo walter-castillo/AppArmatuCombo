@@ -52,28 +52,34 @@ npm start
 
 En la siguiente imagen se muestra la pantalla inicial, donde el usuario debe seleccionar una hamburguesa y escribir su nombre para habilitar el botón "Siguiente". Sin completar ambos campos, no es posible avanzar al siguiente paso.
 
-https://ibb.co/zWjPSpcj
+![Pantalla inicial](https://ibb.co/zWjPSpcj)
 
 
 En esta sección, puedes ver cómo la aplicación te permite personalizar tu combo de hamburguesas de manera sencilla y visual. Cada ingrediente, acompañamiento y bebida se presenta con opciones claras para que puedas elegir según tus preferencias. Además, el sistema de carrito te muestra en tiempo real los productos seleccionados y el precio total, facilitando la revisión y modificación de tu pedido antes de finalizar la compra.
 
 Para mejorar la experiencia de usuario, las imágenes cuentan con un efecto *hover*: al pasar el cursor sobre ellas, se resaltan con un borde y una sombra suave, permitiendo identificar fácilmente la opción seleccionada o visualizar mejor los detalles de cada pantalla.
 
-https://ibb.co/ZRh6ZBw0
+
+![Personalización](https://ibb.co/ZRh6ZBw0)
 
 
 En esta pantalla, el usuario puede seleccionar una bebida para completar su combo. Si decide no elegir ninguna, puede finalizar el pedido igualmente. Al hacer clic en "Finalizar pedido", la aplicación genera un ticket en PDF con el resumen de la compra. Además, se ofrece la opción de regresar al paso inicial para seleccionar una hamburguesa diferente y crear un nuevo combo.
 
-https://ibb.co/xqVscCPm
+
+![Bebidas](https://ibb.co/xqVscCPm)
 
 
 En la última imagen se muestra el ticket generado por la aplicación, donde se detallan los productos seleccionados, el precio total y el total de calorías del combo. Esta pantalla permite al usuario revisar el resumen de su compra antes de finalizar el pedido.
 
-https://ibb.co/Rpw0HNr7
+
+![Ticket PDF](https://ibb.co/Rpw0HNr7)
+
 
 ---
-🔗 **Demo**
-🔜 https://app-armatu-combo.vercel.app/
+🔗 **Demo**  
+▶ [https://app-armatu-combo.vercel.app/](https://app-armatu-combo.vercel.app/)  
+
+![QR Code](https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://app-armatu-combo.vercel.app/)
 
   
 ---
