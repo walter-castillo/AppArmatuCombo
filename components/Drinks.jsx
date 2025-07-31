@@ -2,6 +2,7 @@
 import { restarBebidas, seleccionarDrinks } from '@/store/slices/comboSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import Quitar from '@/components/Quitar';
+import Image from 'next/image';
 
 const Drinks = () => {
   const drinks = useSelector((state) => state.combo.drinks);
@@ -24,12 +25,16 @@ const Drinks = () => {
         return (
           <li key={drink.id} className="m-6">
             <div className="flex items-center">
-              <img
-                src={drink.image}
-                alt={drink.name}
-                className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-115 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
-                onClick={() => handleSelect(drink)}
-              />
+              <div className="flex items-center w-[140px]">
+                <Image
+                  src={drink.image}
+                  alt={drink.name}
+                  width={300}
+                  height={250}
+                  className="w-full h-auto rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
+                  onClick={() => handleSelect(drink)}
+                />
+              </div>
               <div className="ml-4">
                 <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
                   {drink.name}
