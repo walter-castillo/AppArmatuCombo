@@ -1,5 +1,6 @@
 'use client';
 import { seleccionarBase } from '@/store/slices/comboSlice';
+import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Bases = () => {
@@ -16,12 +17,15 @@ const Bases = () => {
         {bases.map((base) => (
           <li key={base.id} className="m-6">
             <div className="flex items-center">
-              <img
+              <Image src={`/${base.image}`}  alt={base.name} width={140} height={140} className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
+              onClick={() => handleSelect(base)}
+              />
+              {/* <img
                 src={base.image}
                 alt={base.name}
                 className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
                 onClick={() => handleSelect(base)}
-              />
+              /> */}
               <div className="ml-4">
                 <h3 className="text-base/7 font-semibold tracking-tight text-gray-900">
                   {base.name}
