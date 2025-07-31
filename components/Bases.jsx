@@ -17,7 +17,7 @@ const Bases = () => {
         {bases.map((base) => (
           <li key={base.id} className="m-6">
             <div className="flex items-center">
-              <Image src={`/${base.image}`}  alt={base.name} width={140} height={140} className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
+              <Image src={base.image}  alt={base.name} width={140} height={140} className="size-35 rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
               onClick={() => handleSelect(base)}
               />
               {/* <img

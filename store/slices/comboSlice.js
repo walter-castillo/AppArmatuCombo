@@ -8,7 +8,7 @@ const initialState = {
       name: "Single",
       price: 1000,
       cal: 400,
-      image: "./bases/simple.png",
+      image: "/bases/simple.png",
     },
     {
       id: 2,
