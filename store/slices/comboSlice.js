@@ -70,14 +70,7 @@ const initialState = {
     },
   ],
   drinks: [
-    {
-      id: 1,
-      name: "Coca-Cola",
-      price: 500,
-      cal: 200,
-      image: "/drinks/coca.png",
-    },
-    { id: 2, name: "Agua", price: 300, cal: 0, image: "/drinks/agua.png" },
+   
     {
       id: 3,
       name: "Sprite",
@@ -85,6 +78,14 @@ const initialState = {
       cal: 180,
       image: "/drinks/sprite.png",
     },
+    {
+      id: 1,
+      name: "Coca-Cola",
+      price: 500,
+      cal: 200,
+      image: "/drinks/coca.png",
+    },
+     { id: 2, name: "Agua", price: 300, cal: 0, image: "/drinks/agua.png" }
   ],
   selectedCombo: {
     name: null,

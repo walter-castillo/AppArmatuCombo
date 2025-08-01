@@ -25,12 +25,12 @@ const Drinks = () => {
         return (
           <li key={drink.id} className="m-6">
             <div className="flex items-center">
-              <div className="flex items-center w-[140px]">
+              <div className="flex items-center">
                 <Image
                   src={drink.image}
                   alt={drink.name}
-                  width={300}
-                  height={250}
+                  width={200}
+                  height={166}
                   className="w-full h-auto rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
                   onClick={() => handleSelect(drink)}
                 />

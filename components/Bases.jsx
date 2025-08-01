@@ -17,12 +17,12 @@ const Bases = () => {
         {bases.map((base) => (
           <li key={base.id} className="m-6">
             <div className="flex items-center">
-              <div className="flex items-center w-[140px]">
+              <div className="flex items-center">
                 <Image
                   src={base.image}
                   alt={base.name}
-                  width={300}
-                  height={250}
+                  width={200}
+                  height={166}
                   className="w-full h-auto rounded-xl transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-lg active:scale-90 active:opacity-70 cursor-pointer"
                   onClick={() => handleSelect(base)}
                 />
