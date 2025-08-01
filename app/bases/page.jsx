@@ -46,7 +46,6 @@ const Page = () => {
           más se adapte a tu antojo: ¿simple, doble, veggie o de pollo?.
         </p>
       </div>
-      {/* <div className="m-2 flex justify-end lg:px-22"> */}
       <div className="m-5  flex justify-between items-center max-w-7xl ">
         <NombreInput />
         <Next url={"/ingredientes"} />
