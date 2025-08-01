@@ -19,7 +19,7 @@ const NombreInput = () => {
         placeholder="Ingresá tu nombre"
         value={nombre}
         onChange={(e) => changeName(e.target.value)}
-        className="px-1 py-2 text-xs border rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400"
+        className="px-1 py-2 text-xs border rounded-xl focus:outline-none focus:ring-2 focus:ring-lime-400 text-gray-100"
       />
     </div>
   );

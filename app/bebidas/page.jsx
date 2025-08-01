@@ -38,7 +38,7 @@ const page = () => {
   return (
     <div className="py-14 max-w-7xl container mx-auto px-6">
       <div>
-        <h2 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-semibold tracking-tight text-pretty  sm:text-4xl  text-gray-100" >
           Paso 3: Elegí tu bebida
         </h2>
         <p className="mt-6 text-lg/8 text-gray-100">
