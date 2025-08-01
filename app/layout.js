@@ -5,7 +5,7 @@ import "./globals.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className="bg-sky-600">
+      <body className="bg-sky-800">
         <ClientProvider>{children}</ClientProvider>
       </body>
     </html>

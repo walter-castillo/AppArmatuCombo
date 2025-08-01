@@ -41,7 +41,7 @@ const page = () => {
         <h2 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
           Paso 3: Elegí tu bebida
         </h2>
-        <p className="mt-6 text-lg/8 text-gray-600">
+        <p className="mt-6 text-lg/8 text-gray-100">
           Para cerrar tu combo, elegí la bebida que más te refresque. Gaseosas
           clásicas, sin azúcar o jugos naturales.!
         </p>

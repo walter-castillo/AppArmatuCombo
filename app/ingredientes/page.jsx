@@ -40,7 +40,7 @@ const page = () => {
         <h2 className="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl">
           Paso 2: Personalizá tus ingredientes
         </h2>
-        <p className="mt-6 text-lg/8 text-gray-600">
+        <p className="mt-6 text-lg/8 text-gray-100">
           Ahora sí, es momento de tunear tu hamburguesa. Sumale queso, panceta,
           lechuga, salsas o lo que más te guste. Hacela única, como vos.
         </p>
